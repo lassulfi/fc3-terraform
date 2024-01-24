@@ -1,8 +1,8 @@
-variable "prefix" {
+variable "vpc_id" {
   
 }
 
-variable "vpc_cidr_block" {
+variable "prefix" {
   
 }
 
@@ -11,6 +11,10 @@ variable "cluster_name" {
 }
 
 variable "retention_in_days" {
+  
+}
+
+variable "subnet_ids" {
   
 }
 

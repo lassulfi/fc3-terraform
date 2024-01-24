@@ -1,5 +1,5 @@
 resource "aws_vpc" "new-vpc" {
-  cidr_block = "10.0.0.0/16"
+  cidr_block = var.vpc_cidr_block
   tags = {
     Name = "${var.prefix}-vpc"
   }
@@ -8,10 +8,6 @@ resource "aws_vpc" "new-vpc" {
 data "aws_availability_zones" "available" {
 
 }
-
-# output "az" {
-#   value = "${data.aws_availability_zones.available.names}"
-# }
 
 resource "aws_subnet" "subnets" {
   count             = 2
